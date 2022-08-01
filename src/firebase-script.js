@@ -1,7 +1,7 @@
 // import firebase app (CDN)
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js';
 // var provider = new firebase.auth.FacebookAuthProvider(); //new
-// import { getAuth, signInWithRedirect } from "firebase/auth";
+import { getAuth, signInWithRedirect } from "firebase/auth";
 
 
 // authentication imports
@@ -60,31 +60,31 @@ let userDoc = null;
 let userEmail = "";
 export let todos = [];
 //new start
-import { getAuth, signInWithPopup, FacebookAuthProvider } from "firebase/auth";
+// import { getAuth, signInWithPopup, FacebookAuthProvider } from "firebase/auth";
 
-const auth = getAuth();
-signInWithPopup(auth, provider)
-  .then((result) => {
-    // The signed-in user info.
-    const user = result.user;
+// const auth = getAuth();
+// signInWithPopup(auth, provider)
+//   .then((result) => {
+//     // The signed-in user info.
+//     const user = result.user;
 
-    // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-    const credential = FacebookAuthProvider.credentialFromResult(result);
-    const accessToken = credential.accessToken;
+//     // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+//     const credential = FacebookAuthProvider.credentialFromResult(result);
+//     const accessToken = credential.accessToken;
 
-    // ...
-  })
-  .catch((error) => {
-    // Handle Errors here.
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // The email of the user's account used.
-    const email = error.customData.email;
-    // The AuthCredential type that was used.
-    const credential = FacebookAuthProvider.credentialFromError(error);
+//     // ...
+//   })
+//   .catch((error) => {
+//     // Handle Errors here.
+//     const errorCode = error.code;
+//     const errorMessage = error.message;
+//     // The email of the user's account used.
+//     const email = error.customData.email;
+//     // The AuthCredential type that was used.
+//     const credential = FacebookAuthProvider.credentialFromError(error);
 
-    // ...
-  });
+//     // ...
+//   });
 //new end
 
 // ##REDIRECT## if the todos page is accessed, redirect to index if the user is not logged in
