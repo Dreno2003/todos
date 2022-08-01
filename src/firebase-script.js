@@ -68,12 +68,12 @@ export let todos = [];
 //     // The signed-in user info.
 //     const user = result.user;
 
-//     // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+    // This gives you a Facebook Access Token. You can use it to access the Facebook API.
 //     const credential = FacebookAuthProvider.credentialFromResult(result);
 //     const accessToken = credential.accessToken;
 
 //     // ...
-//   })
+  
 //   .catch((error) => {
 //     // Handle Errors here.
 //     const errorCode = error.code;
@@ -85,6 +85,32 @@ export let todos = [];
 
 //     // ...
 //   });
+var provider = new firebase.auth.FacebookAuthProvider();
+
+function facebookSignin() {
+   firebase.auth().signInWithPopup(provider)
+   
+   .then(function(result) {
+      var token = result.credential.accessToken;
+      var user = result.user;
+		
+      console.log(token)
+      console.log(user)
+   }).catch(function(error) {
+      console.log(error.code);
+      console.log(error.message);
+   });
+}
+
+function facebookSignout() {
+   firebase.auth().signOut()
+   
+   .then(function() {
+      console.log('Signout successful!')
+   }, function(error) {
+      console.log('Signout failed')
+   });
+}
 //new end
 
 // ##REDIRECT## if the todos page is accessed, redirect to index if the user is not logged in
