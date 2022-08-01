@@ -1,7 +1,7 @@
 // import firebase app (CDN)
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js';
 // var provider = new firebase.auth.FacebookAuthProvider(); //new
-// import { getAuth, signInWithRedirect } from "firebase/auth";
+import { getAuth, signInWithRedirect } from "firebase/auth";
 
 
 // authentication imports
