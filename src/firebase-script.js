@@ -1,7 +1,7 @@
 // import firebase app (CDN)
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js';
 // var provider = new firebase.auth.FacebookAuthProvider(); //new
-import { getAuth, signInWithRedirect } from "firebase/auth";
+// import { getAuth, signInWithRedirect } from "firebase/auth";
 
 
 // authentication imports
@@ -85,32 +85,32 @@ export let todos = [];
 
 //     // ...
 //   });
-var provider = new firebase.auth.FacebookAuthProvider();
+// var provider = new firebase.auth.FacebookAuthProvider();
 
-function facebookSignin() {
-   firebase.auth().signInWithPopup(provider)
+// function facebookSignin() {
+//    firebase.auth().signInWithPopup(provider)
    
-   .then(function(result) {
-      var token = result.credential.accessToken;
-      var user = result.user;
+//    .then(function(result) {
+//       var token = result.credential.accessToken;
+//       var user = result.user;
 		
-      console.log(token)
-      console.log(user)
-   }).catch(function(error) {
-      console.log(error.code);
-      console.log(error.message);
-   });
-}
+//       console.log(token)
+//       console.log(user)
+//    }).catch(function(error) {
+//       console.log(error.code);
+//       console.log(error.message);
+//    });
+// }
 
-function facebookSignout() {
-   firebase.auth().signOut()
+// function facebookSignout() {
+//    firebase.auth().signOut()
    
-   .then(function() {
-      console.log('Signout successful!')
-   }, function(error) {
-      console.log('Signout failed')
-   });
-}
+//    .then(function() {
+//       console.log('Signout successful!')
+//    }, function(error) {
+//       console.log('Signout failed')
+//    });
+//}
 //new end
 
 // ##REDIRECT## if the todos page is accessed, redirect to index if the user is not logged in
