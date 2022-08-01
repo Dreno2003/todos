@@ -28,7 +28,8 @@
     <link rel="stylesheet" href="./styles/keen-slider-styles.css">
 </head>
 <body>
-
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0&appId=580628463549910&autoLogAppEvents=1" nonce="AZNymO05"></script>
     <!-- pre loader -->
     <!-- <div class="loading d-flex flex-column justify-content-center align-items-center" id="loader">
         <h3 class="display-4">Loading the page...</h3>
@@ -73,6 +74,9 @@
                 </li>
             </ul>
         </div>
+
+        <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
+        
     </nav>
 
     <!-- login modal -->
@@ -168,6 +172,7 @@
                 <h2 class="display-2 text-center logoText">Simple todo</h2>
                 <div class="container d-flex justify-content-center mt-4">
                     <button class="btn btn-info p-4 fs-4 mb-4" id="getStartedBtn" data-bs-toggle="modal" data-bs-target="#signUpModal">Get started <i class="fa-solid fa-circle-arrow-right fa-2xl ms-2"></i></button>
+                    <!-- <button onclick="signInWithPopup()">sign up with facebook</button> -->
                 </div>
             </div>
             <!-- todo image/icon -->
