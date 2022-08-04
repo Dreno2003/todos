@@ -54,7 +54,15 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+//=======
+//facebook auth
+const facebookProvider = new firebase.auth.FacebookAuthProvider();
+facebookProvider.addScope('email');
 
+const userCredential = yield firebase_app.auth().signInWithPopup(facebookProvider);
+
+
+//=======
 // Initialize Cloud Firestore
 const db = getFirestore(app);
 
