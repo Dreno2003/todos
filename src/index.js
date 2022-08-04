@@ -15,8 +15,8 @@ window.onload = () => {
         console.log("User is not logged in");
     }
     // if the home page is accessed, remove the loader onload
-    const loader = document.getElementById('loader');
-    loader.remove();
+    // const loader = document.getElementById('loader');
+    // loader.remove();
 };
 
 

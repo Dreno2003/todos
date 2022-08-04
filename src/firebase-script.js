@@ -1,8 +1,5 @@
 // import firebase app (CDN)
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js';
-// var provider = new firebase.auth.FacebookAuthProvider(); //new
-// import { getAuth, signInWithRedirect } from "firebase/auth";
-
 
 // authentication imports
 import { 
@@ -14,7 +11,7 @@ import {
     signOut,
 } from 'https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js';
 
-// firestore imports
+// firestore imports 
 import { 
     getFirestore,
     collection,
@@ -39,17 +36,24 @@ import {
 const firebaseCred = {};
 const firebaseConfig = {
     apiKey: "AIzaSyD_7v1k8A14uhhfMN1h1_jwS0q7kGA_y6o",
-    authDomain: "todotest-f00fb.firebaseapp.com",
-    projectId: "todotest-f00fb",
-    storageBucket: "todotest-f00fb.appspot.com",
-    messagingSenderId: "219580056634",
-    appId: "1:219580056634:web:9e17c8611722dc05c0e103",
-    measurementId: "G-TLL2Y2M9QP"
+
+  authDomain: "todotest-f00fb.firebaseapp.com",
+
+  projectId: "todotest-f00fb",
+
+  storageBucket: "todotest-f00fb.appspot.com",
+
+  messagingSenderId: "219580056634",
+
+  appId: "1:219580056634:web:9e17c8611722dc05c0e103",
+
+  measurementId: "G-TLL2Y2M9QP"
+
 };
   
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-// const auth = getAuth(app);  //un comment to redo
+const auth = getAuth(app);
 
 // Initialize Cloud Firestore
 const db = getFirestore(app);
@@ -59,59 +63,6 @@ let userDocRef = null;
 let userDoc = null;
 let userEmail = "";
 export let todos = [];
-//new start
-// import { getAuth, signInWithPopup, FacebookAuthProvider } from "firebase/auth";
-
-// const auth = getAuth();
-// signInWithPopup(auth, provider)
-//   .then((result) => {
-//     // The signed-in user info.
-//     const user = result.user;
-
-    // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-//     const credential = FacebookAuthProvider.credentialFromResult(result);
-//     const accessToken = credential.accessToken;
-
-//     // ...
-  
-//   .catch((error) => {
-//     // Handle Errors here.
-//     const errorCode = error.code;
-//     const errorMessage = error.message;
-//     // The email of the user's account used.
-//     const email = error.customData.email;
-//     // The AuthCredential type that was used.
-//     const credential = FacebookAuthProvider.credentialFromError(error);
-
-//     // ...
-//   });
-// var provider = new firebase.auth.FacebookAuthProvider();
-
-// function facebookSignin() {
-//    firebase.auth().signInWithPopup(provider)
-   
-//    .then(function(result) {
-//       var token = result.credential.accessToken;
-//       var user = result.user;
-		
-//       console.log(token)
-//       console.log(user)
-//    }).catch(function(error) {
-//       console.log(error.code);
-//       console.log(error.message);
-//    });
-// }
-
-// function facebookSignout() {
-//    firebase.auth().signOut()
-   
-//    .then(function() {
-//       console.log('Signout successful!')
-//    }, function(error) {
-//       console.log('Signout failed')
-//    });
-//}
-//new end
 
 // ##REDIRECT## if the todos page is accessed, redirect to index if the user is not logged in
 if(window.location.href.includes('todos.html')) {

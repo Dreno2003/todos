@@ -28,67 +28,10 @@
     <link rel="stylesheet" href="./styles/keen-slider-styles.css">
 </head>
 <body>
-    <div id="fb-root"></div>
-    <!-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0&appId=580628463549910&autoLogAppEvents=1" nonce="AZNymO05"></script> -->
+
     <!-- pre loader -->
-    <!-- <div class="loading d-flex flex-column justify-content-center align-items-center" id="loader">
-        <h3 class="display-4">Loading the page...</h3>
-        <div class="spinner">
-            <div class="rect1 me-3"></div>
-            <div class="rect2 me-3"></div>
-            <div class="rect3 me-3"></div>
-            <div class="rect4 me-3"></div>
-            <div class="rect5 me-3"></div>
-        </div>
+   
 
-    </div> -->
-
-    <script>
-
-        function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
-          console.log('statusChangeCallback');
-          console.log(response);                   // The current login status of the person.
-          if (response.status === 'connected') {   // Logged into your webpage and Facebook.
-            testAPI();  
-          } else {                                 // Not logged into your webpage or we are unable to tell.
-            document.getElementById('status').innerHTML = 'Please log ' +
-              'into this webpage.';
-          }
-        }
-      
-      
-        function checkLoginState() {               // Called when a person is finished with the Login Button.
-          FB.getLoginStatus(function(response) {   // See the onlogin handler
-            statusChangeCallback(response);
-          });
-        }
-      
-      
-        window.fbAsyncInit = function() {
-          FB.init({
-            appId      : '{app-id}',
-            cookie     : true,                     // Enable cookies to allow the server to access the session.
-            xfbml      : true,                     // Parse social plugins on this webpage.
-            version    : '{api-version}'           // Use this Graph API version for this call.
-          });
-      
-      
-          FB.getLoginStatus(function(response) {   // Called after the JS SDK has been initialized.
-            statusChangeCallback(response);        // Returns the login status.
-          });
-        };
-       
-        function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
-          console.log('Welcome!  Fetching your information.... ');
-          FB.api('/me', function(response) {
-            console.log('Successful login for: ' + response.name);
-            document.getElementById('status').innerHTML =
-              'Thanks for logging in, ' + response.name + '!';
-          });
-        }
-      
-      </script>
-      
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg">
         <!-- brand-logo -->
@@ -121,10 +64,6 @@
                 </li>
             </ul>
         </div>
-
-        <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
-        <button onclick = "facebookSignin()">Facebook Signin</button>
-<button onclick = "facebookSignout()">Facebook Signout</button>
     </nav>
 
     <!-- login modal -->
@@ -220,7 +159,6 @@
                 <h2 class="display-2 text-center logoText">Simple todo</h2>
                 <div class="container d-flex justify-content-center mt-4">
                     <button class="btn btn-info p-4 fs-4 mb-4" id="getStartedBtn" data-bs-toggle="modal" data-bs-target="#signUpModal">Get started <i class="fa-solid fa-circle-arrow-right fa-2xl ms-2"></i></button>
-                    <!-- <button onclick="signInWithPopup()">sign up with facebook</button> -->
                 </div>
             </div>
             <!-- todo image/icon -->
@@ -368,7 +306,7 @@
     </footer>
 
     <!-- Goto top button -->
-    <button id="gotoTopBtn" class="rounded-circle" title="Goto top">
+    <button id="gotoTopBtn" 
         <i class="fa-solid fa-circle-arrow-up fs-1"></i>
     </button>
 
@@ -380,10 +318,7 @@
 
     <!-- Custom scripts -->
     <script type="module" src="./src/index.js"></script>
-    <script>
-
-        
-    </script>
 
 </body>
 </html>
+<!-- Footer -->

@@ -23,13 +23,21 @@
 // };
 
 const firebaseConfig = {
-    apiKey: "AIzaSyD_7v1k8A14uhhfMN1h1_jwS0q7kGA_y6o",
-    authDomain: "todotest-f00fb.firebaseapp.com",
-    projectId: "todotest-f00fb",
-    storageBucket: "todotest-f00fb.appspot.com",
-    messagingSenderId: "219580056634",
-    appId: "1:219580056634:web:9e17c8611722dc05c0e103",
-    measurementId: "G-TLL2Y2M9QP"
+  apiKey: "AIzaSyD_7v1k8A14uhhfMN1h1_jwS0q7kGA_y6o",
+
+  authDomain: "todotest-f00fb.firebaseapp.com",
+
+  projectId: "todotest-f00fb",
+
+  storageBucket: "todotest-f00fb.appspot.com",
+
+  messagingSenderId: "219580056634",
+
+  appId: "1:219580056634:web:9e17c8611722dc05c0e103",
+
+  measurementId: "G-TLL2Y2M9QP"
+
+
   };
 
 // Initialize Firebase
