@@ -1,5 +1,21 @@
 // const firebaseConfig = {
-
+    const auth = firebase.auth();
+    const signInWithFacebookButton = document.getElementById('signInWithFacebook');
+    
+    const signInWithFacebook = () => {
+        const facebookProvider = new firebase.auth.FacebookAuthProvider();
+      
+        auth.signInWithPopup(facebookProvider)
+        .then(() => {
+          window.location.assign('./profile');
+        })
+        .catch(error => {
+          console.error(error);
+        })
+      }
+    
+    signInWithFacebookButton.addEventListener('click', signInWithFacebook);
+    
 // to initialise keen slider
 import { navigation } from './keen-slider-script.js';
 
