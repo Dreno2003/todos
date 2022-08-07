@@ -317,25 +317,26 @@
     <!-- Custom scripts -->
     <script src="/__/firebase/6.2.4/firebase-app.js"></script>
     <script src="/__/firebase/6.2.4/firebase-auth.js"></script>
-    <script type="module" src="./src/index.js"></script>
     <script defer>
-            const auth = firebase.auth();
-    const signInWithFacebookButton = document.getElementById('signInWithFacebook');
-    
-    const signInWithFacebook = () => {
-        const facebookProvider = new firebase.auth.FacebookAuthProvider();
-      
-        auth.signInWithPopup(facebookProvider)
-        .then(() => {
-          window.location.assign('./profile');
-        })
-        .catch(error => {
-          console.error(error);
-        })
-      }
-    
-    signInWithFacebookButton.addEventListener('click', signInWithFacebook);
-    </script>
+        const auth = firebase.auth();
+const signInWithFacebookButton = document.getElementById('signInWithFacebook');
+
+const signInWithFacebook = () => {
+    const facebookProvider = new firebase.auth.FacebookAuthProvider();
+  
+    auth.signInWithPopup(facebookProvider)
+    .then(() => {
+      window.location.assign('./profile');
+    })
+    .catch(error => {
+      console.error(error);
+    })
+  }
+
+signInWithFacebookButton.addEventListener('click', signInWithFacebook);
+</script>
+
+    <script type="module" src="./src/index.js"></script>
 
 </body>
 </html>
