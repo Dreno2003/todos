@@ -1,3 +1,5 @@
+// const firebaseConfig = {
+
 // to initialise keen slider
 import { navigation } from './keen-slider-script.js';
 
