@@ -121,6 +121,8 @@ export const createUserDocInFirestore = (email) => {
 // const auth = firebase.auth();
 
 // var provider = new firebase.auth.FacebookAuthProvider();const signInWithFacebook = () => {
+    const signInWithFacebookButton = document.getElementById('signInWithFacebook');
+
     const signInWithFacebook = () => {
         const facebookProvider = new firebase.auth.FacebookAuthProvider();
       
