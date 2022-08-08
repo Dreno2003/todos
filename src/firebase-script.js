@@ -118,24 +118,15 @@ export const createUserDocInFirestore = (email) => {
 };
 
 
-const authen= firebase.auth();
+// const authen= firebase.auth();
+
+
+    
+
 
 // var provider = new firebase.auth.FacebookAuthProvider();const signInWithFacebook = () => {
-    const signInWithFacebookButton = document.getElementById('signInWithFacebook');
-
-    const signInWithFacebook = () => {
-        const facebookProvider = new firebase.auth.FacebookAuthProvider();
-      
-        authen.signInWithPopup(facebookProvider)
-        .then(() => {
-          window.location.assign('./profile');
-        })
-        .catch(error => {
-          console.error(error);
-        })
-      }
-      
-      signInWithFacebookButton.addEventListener('click', signInWithFacebook);
+    // var provider = new firebase.auth.FacebookAuthProvider();
+    
 // signInWithFacebookButton.addEventListener('click', signInWithFacebook);
 
 
