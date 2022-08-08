@@ -117,6 +117,11 @@ export const createUserDocInFirestore = (email) => {
     });
 };
 
+
+// const auth = firebase.auth();
+
+
+
 // sign up a user with email and pwd
 export const signUpUser = (displayName, email, password) => {
     const invalidAuth = document.querySelector('#signup-invalid-auth');
