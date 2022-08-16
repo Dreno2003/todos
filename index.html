@@ -61,9 +61,16 @@
                     </a>
                 </li>
             </ul>
+
         </div>
-        <button id="signIn" onclick="signIn">sign face</button>
-         
+        <!-- my own onclick="signin()" -->
+         <button id="signIn">
+            Sign in with Facebook
+        </button>
+ 
+          <button style="display:none;text-align:crnter" onclick="signout()" id="sign-out">
+            SignOut <!-sign-in- -->
+        </button>
          <!-- <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="true" data-use-continue-as="false"></div> -->
         </nav>
 
@@ -384,6 +391,115 @@ function checkLoginState() {
 }
 </script>
     </script> -->
+    <!-- <script src="./src/faceboo"></script> -->
+   <!--  <script src="/__/firebase/6.2.4/firebase-app.js"></script>
+    <script src="/__/firebase/6.2.4/firebase-auth.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-auth.js"></script>
+    <script>
+  // Your web app's Firebase configuration
+
+  // var firebaseConfig = {
+  //   apiKey: "AIzaSyBaaR3NfTRH8Nn_lBU2g9FD586YPDfzqdg",
+  //   authDomain: "convertimagetopdf-94d3a.firebaseapp.com",
+  //   databaseURL: "https://convertimagetopdf-94d3a.firebaseio.com",
+  //   projectId: "convertimagetopdf-94d3a",
+  //   storageBucket: "convertimagetopdf-94d3a.appspot.com",
+  //   messagingSenderId: "688742065326",
+  //   appId: "1:688742065326:web:f9b11a9568b7c095"
+  // };
+  // Initialize Firebase
+  // firebase.initializeApp(firebaseConfig); from the site
+
+
+//my Own
+// const firebaseCred = {};
+var firebaseConfig = {
+    apiKey: "AIzaSyD_7v1k8A14uhhfMN1h1_jwS0q7kGA_y6o",
+
+    authDomain: "todotest-f00fb.firebaseapp.com",
+  
+    projectId: "todotest-f00fb",
+  
+    storageBucket: "todotest-f00fb.appspot.com",
+  
+    messagingSenderId: "219580056634",
+  
+    appId: "1:219580056634:web:9e17c8611722dc05c0e103",
+  
+    measurementId: "G-TLL2Y2M9QP"
+};
+ firebase.initializeApp(firebaseConfig); //from the site
+
+
+//sign-in
+const signInWithFacebookButton = document.getElementById('signIn');
+
+const auth = firebase.auth();
+
+const signIn = () => {
+  const facebookProvider = new firebase.auth.FacebookAuthProvider();
+
+  auth.signInWithPopup(facebookProvider)
+  .then(() => {
+    window.location.assign('./todos');
+  })
+  .catch(error => {
+    console.error(error);
+  })
+}
+
+signInWithFacebookButton.addEventListener('click', signIn);
+
+
+//   const app = initializeApp(firebaseConfig);
+// const auth = getAuth(app);
+
+//uncomment this code
+
+//     function signin()
+//     {
+//     var provider = new firebase.auth.FacebookAuthProvider();
+//     provider.addScope('user_birthday,email');
+//     firebase.auth().useDeviceLanguage();
+//     firebase.auth().signInWithPopup(provider).then(function(result) {
+//   // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+//   var token = result.credential.accessToken;
+//   // The signed-in user info.
+//   document.querySelector("#sign-out").style.display="block";
+//   console.log(user);
+//   var user = result.user;
+//   console.log(user.email);
+//   var userImage = document.querySelector("#user-image");
+ 
+//   // appending the user profile image
+ 
+//   var userPic = document.createElement("img");
+//   userPic.src=user.photoURL;
+//   userImage.append(userPic);
+ 
+//   // appending the user email address
+ 
+//   var userEmail = document.querySelector("#user-email");
+//   userEmail.innerHTML = user.email;
+ 
+//   // ...
+// }).catch(function(error) {
+//   // Handle Errors here.
+//   var errorCode = error.code;
+//   var errorMessage = error.message;
+//   // The email of the user's account used.
+//   var email = error.email;
+//   // The firebase.auth.AuthCredential type that was used.
+//   var credential = error.credential;
+//   // ...
+// });
+ 
+//     }
+
+</script>
+
+    <!-- <script type="module" src="src/facebook.js"></script> -->
     <script type="module" src="./src/index.js"></script>
 
 </body>
