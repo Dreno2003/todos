@@ -417,8 +417,8 @@ function checkLoginState() {
 var firebaseConfig = {
     apiKey: "AIzaSyD_7v1k8A14uhhfMN1h1_jwS0q7kGA_y6o",
 
-    // authDomain: "todotest-f00fb.firebaseapp.com",
-     authDomain: "https://testtodos.netlify.app/",
+    authDomain: "todotest-f00fb.firebaseapp.com",
+    //  authDomain: "https://testtodos.netlify.app/",
   
     projectId: "todotest-f00fb",
   
@@ -431,12 +431,13 @@ var firebaseConfig = {
     measurementId: "G-TLL2Y2M9QP"
 };
  firebase.initializeApp(firebaseConfig); //from the site
+ const auth = firebase.auth();
 
 
 //sign-in
 const signInWithFacebookButton = document.getElementById('signIn');
 
-const auth = firebase.auth();
+// const auth = firebase.auth();
 
 const signIn = () => {
   const facebookProvider = new firebase.auth.FacebookAuthProvider();
