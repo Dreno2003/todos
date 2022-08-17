@@ -417,7 +417,8 @@ function checkLoginState() {
 var firebaseConfig = {
     apiKey: "AIzaSyD_7v1k8A14uhhfMN1h1_jwS0q7kGA_y6o",
 
-    authDomain: "todotest-f00fb.firebaseapp.com",
+    // authDomain: "todotest-f00fb.firebaseapp.com",
+     authDomain: "https://testtodos.netlify.app/",
   
     projectId: "todotest-f00fb",
   
@@ -442,7 +443,7 @@ const signIn = () => {
 
   auth.signInWithPopup(facebookProvider)
   .then(() => {
-    window.location.assign('./todos');
+    window.location.assign('./todos.html');
   })
   .catch(error => {
     console.error(error);
